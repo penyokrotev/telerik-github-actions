@@ -62,6 +62,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: factorial.py
+        path: factorial.py
+
+
       
    
           
