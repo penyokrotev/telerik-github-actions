@@ -1,0 +1,19 @@
+name: Practice
+env:
+  WORKSPACE_ENVIRONMENT_VARIABLE: 'custom workspace environment variable'
+on: [push]
+jobs:
+  pre-build:
+    env:
+      JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for ubuntu'
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple name
+        env:
+          STEP_ENVIRONMENT_VARIABLE: 'custom step environment variable for bash'
+      - run: |
+          echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
+          echo "$JOB_ENVIRONMENT_VARIABLE"
+          echo "$STEP_ENVIRONMENT_VARIABLE"
+          
+
