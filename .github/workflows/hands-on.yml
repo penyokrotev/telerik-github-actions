@@ -70,8 +70,8 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: factorial.py, lint_test.py
-        path: factorial.py, lint_test.py
+        name: factorial.py
+        path: .
       
 
 
