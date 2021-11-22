@@ -89,7 +89,7 @@ jobs:
     needs: unit-test
     runs-on: ubuntu-latest
     steps:
-    - run: "Deploy to prod"
+    - run: echo "Deploy to prod"
 
 
       
