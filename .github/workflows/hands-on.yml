@@ -34,11 +34,24 @@ jobs:
       run: |
         python lint_test.py
   style:
+    needs: pre-build
     runs-on: ubuntu-latest
     steps:
-    - name: simple name
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
       run: |
-        echo "Style stage"
+        python --version
+        python -m pip install --upgrade pip
+        pip install pycodestyle
+    - name: Style with pycodestyle
+      run: |
+        python --version
+        pycodestyle *.py
    
           
 
