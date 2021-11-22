@@ -16,5 +16,18 @@ jobs:
         echo "$JOB_ENVIRONMENT_VARIABLE"
         echo "$STEP_ENVIRONMENT_VARIABLE"
         echo "${{ secrets.PASSWORD }}"
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: simple name
+      run: |
+        echo "Lint stage"
+  style:
+    runs-on: ubuntu-latest
+    steps:
+    - name: simple name
+      run: |
+        echo "Style stage"
+   
           
 
