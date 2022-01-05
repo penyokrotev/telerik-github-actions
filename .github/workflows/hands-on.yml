@@ -107,11 +107,11 @@ jobs:
     #needs: unit-test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/python-3.9@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - uses: actions/checkout@master
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/python@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   database-integration:
     needs: unit-test
     runs-on: ubuntu-latest
