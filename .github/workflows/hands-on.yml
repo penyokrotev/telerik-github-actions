@@ -119,7 +119,7 @@ jobs:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
   deploy:
-    needs: sonarcloud
+    needs: database-integration
     runs-on: ubuntu-latest
     steps:
     - run: echo "Deploy to prod"
