@@ -1,7 +1,7 @@
 name: Pull_Request
 env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'custom workspace environment variable'
-on: pull_request
+on: [ pull_request ]
 jobs:
   pre-build:
     env:
